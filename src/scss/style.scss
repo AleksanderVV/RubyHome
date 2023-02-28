@@ -1,0 +1,145 @@
+@use "sass:math";
+
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Connecting mixins ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+
+// Connecting fonts ===========================================================================================================================================================================================================================================================================
+//&display=swap - add when connecting via plugin
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
+
+// Connecting if there are local font files
+//@import "fonts/fonts";
+
+// Connecting icons font ==============================================================================================================================================================================================================================================================================
+// Connecting if there are local icon fonts
+//@import "fonts/icons";
+
+// Default font ==============================================================================================================================================================================================================================================================================
+$fontFamily: 'Poppins', sans-serif;
+$fontSize: rem(16); // where 14(px) - default font size from layout
+
+// Main color
+$mainColor: #030A1B; // Default color
+$orangeColor: #FE753F;
+$cianColor: #2E6EFF;
+$whiteColor: #ffffff;
+$backgroundBody: #E5E5E5;
+$opacityMainColor: rgba(0, 0, 0, 0.7);
+
+// SETTINGS ===============================================================================================================================================================================================================================================================================================
+// Minimum width
+$minWidth: 320;
+// Maximum width
+$maxWidth: 1920;
+// Max width container (0 = no limit)
+$maxWidthContainer: 1166;
+// Container overall padding
+// (30 = 15px left and right, 0 = without padding)
+$containerPadding: 30;
+
+// Width of the first breakpoint
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Break points
+$pc: em($containerWidth); // PC, laptop, some tablets in landscape position
+$tablet: em(991.98); // Tablets and some phones in landscape position
+$mobile: em(767.98); // Phones L
+$mobileSmall: em(479.98); // Phones S
+
+// Type of adaptive:
+// 1 = responsive (container not have breakpoints),
+// 2 = breakpoints (container changes its width based on breakpoints)
+$responsiveType: 1;
+
+// General parameters and CSS Reset ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+body {
+  line-height: 24px;
+  background: #E5E5E5;
+	// Scroll blocked
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+// Wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	//  footer down page
+	> main {
+		flex: 1 1 auto;
+	}
+	// Fix for sliders
+	> * {
+		min-width: 0;
+	}
+}
+// Limiting container ======================================================================================================================================================================================================================
+
+/*
+(i) Styling all elements has classes contains *__container
+For example: header__container, main__container и т.д.
+Snippet (HTML): cnt
+*/
+@if ($responsiveType==1) {
+	// responsive
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
+		}
+	}
+} @else {
+	// breakpoints
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer>0) {
+			max-width: rem($maxWidthContainer);
+			box-sizing: content-box;
+		} @else {
+			@if ($containerPadding>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+		@media (max-width: $pc) {
+			max-width: rem(970);
+		}
+		@media (max-width: $tablet) {
+			max-width: rem(750);
+		}
+		@media (max-width: $mobile) {
+			max-width: none;
+			@if ($containerPadding>0 and $maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			}
+		}
+	}
+}
+
+// Connecting base styles, layouts and helper classes
+// For connecting/disconnecting base classes see - base.scss
+@import "base";
+
+// Connecting styles main elements project
+@import "common";
+
+// Connecting styles separate blocks
+@import "header";
+@import "footer";
+
+// Connecting styles separate string
+@import "home";

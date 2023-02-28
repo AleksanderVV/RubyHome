@@ -1,0 +1,101 @@
+<header class="header">
+	<div class="header__container">
+    <div class="header__top">
+      <div class="row">
+        <div class="col-5">
+          <div class="header__logo">
+            <img src="@img/header-logo.png" alt="Logo">
+          </div>
+        </div>
+        <div class="col-7">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-5">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="#">Properties</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                </ul>
+                <div class="header__button-contact">
+                  <a href="#">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="header__main">
+      <div class="row">
+        <div class="col-6">
+          <div class="header__info">
+            <div class="header__title">
+              <h1>Find the perfect place to stay with your family</h1>
+            </div>
+            <div class="header__subtitle">
+              <p>Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life changer.</p>
+            </div>
+            <div class="header__price">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Buy</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Rent</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sell</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                  <div class="tab-buy d-flex">
+                    <select class="form-select form-select_location" aria-label=".form-select">
+                      <option selected>Location</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-select_type" aria-label=".form-select">
+                      <option selected>Property type</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select form-select_price" aria-label=".form-select">
+                      <option selected>Price</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div class="button-search">
+                      <button type="submit">
+                        <img src="@img/icon/lins.png" alt="search">
+                        Search</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="header__image">
+            <img src="@img/header-main-image.jpg" alt="Header Image Building" class="float-end">
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+</header>

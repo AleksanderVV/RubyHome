@@ -1,0 +1,204 @@
+//====================================================================================================
+p {
+  margin-bottom: 0;
+}
+
+.navbar-nav .show > .nav-link, 
+.navbar-nav .nav-link.active,
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: rgba(254, 117, 63, 0.7);
+  font-weight: 600;
+}
+.header__button-contact a {
+  color: $whiteColor;
+  background-color: $cianColor;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.header {
+
+  &__container {
+  }
+
+  &__top {
+    margin-top: 35px;
+    margin-bottom: 70px;
+  }
+
+  &__logo {
+  }
+
+  .navbar {
+    height: 100%;
+  }
+
+  &__button-contact {
+  }
+
+  &__main {
+  }
+
+  &__info {
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 61px;
+    line-height: 120%;
+    margin-top: 44px;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+
+  &__price {
+    .nav {
+
+    }
+    .nav-tabs {
+      border: 0px;
+    }
+    .nav-item {
+      &:first-child {
+        button {
+          border-top-left-radius: 6px;
+        }
+      }
+      &:last-child {
+        button {
+          border-top-right-radius: 6px;
+        }
+      }
+    }
+    .nav-link {
+      font-size: 18px;
+      line-height: 27px;
+      color: $opacityMainColor;
+      border: 0px;
+      border-radius: 0px;
+      background-color: $whiteColor;
+    }
+    .tab-content {
+      position: relative;
+      z-index: 10;
+      background-color: $whiteColor;
+      box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border-top-left-radius: 0px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      width: 842px;
+      select {
+        border: 0px;
+      }
+      .form-select_location {
+        max-width: 170px;
+        padding-left: 30px;
+        padding-right: 50px;
+        background-position: right 3.25rem center;
+      }
+      .form-select_type {
+        max-width: 240px;
+        padding-left: 67px;
+        padding-right: 47px;
+        background-position: right 3rem center;
+      }
+      .form-select_price {
+        max-width: 222px;
+        padding-left: 67px;
+        padding-right: 60px;
+        background-position: right 6rem center;
+      }
+      .button-search {
+        button {
+          width: 130px;
+          font-weight: 500;
+          background: #2E6EFF;
+          border-radius: 10px;
+          color: $whiteColor;
+          padding: 15px 20px;
+          margin-left: 50px;
+          img {
+            margin-right: 2px;
+            padding-top: 4px;
+          }
+        }
+      }      
+    }
+    .tab-pane {
+    }
+    .fade {
+    }
+    .show {
+    }
+  }
+
+  &__image {
+    img {
+      max-width: 484px;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
