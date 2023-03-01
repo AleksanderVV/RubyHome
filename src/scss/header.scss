@@ -1,4 +1,8 @@
 //====================================================================================================
+.form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
 p {
   margin-bottom: 0;
 }
@@ -18,28 +22,13 @@ p {
 
 .header {
 
-  &__container {
-  }
-
   &__top {
     margin-top: 35px;
     margin-bottom: 70px;
   }
 
-  &__logo {
-  }
-
   .navbar {
     height: 100%;
-  }
-
-  &__button-contact {
-  }
-
-  &__main {
-  }
-
-  &__info {
   }
 
   &__title {
@@ -59,10 +48,9 @@ p {
   }
 
   &__price {
-    .nav {
-
-    }
     .nav-tabs {
+      position: relative;
+      z-index: 11;
       border: 0px;
     }
     .nav-item {
@@ -95,27 +83,63 @@ p {
       padding-top: 30px;
       padding-bottom: 30px;
       width: 842px;
+      label {
+        background: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e") no-repeat;
+        background-size: 16px 12px;
+        background-position: right 0% center;
+        width: 100%;
+      }
       select {
         border: 0px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 33px;
+        padding: 0;
+        background: none;
       }
-      .form-select_location {
-        max-width: 170px;
+      .buy-location,
+      .rent-location,
+      .sell-location {
+        width: 170px;
         padding-left: 30px;
         padding-right: 50px;
-        background-position: right 3.25rem center;
+        label {
+          cursor: pointer;
+        }
       }
-      .form-select_type {
-        max-width: 240px;
-        padding-left: 67px;
+      // .form-select_location {
+      //   background-position: right 3.25rem center;
+      // }
+      .buy-type,
+      .rent-type,
+      .sell-type {
+        width: 240px;
+        padding-left: 50px;
         padding-right: 47px;
-        background-position: right 3rem center;
+        label {
+          width: 128px;
+          cursor: pointer;
+        }
       }
-      .form-select_price {
-        max-width: 222px;
-        padding-left: 67px;
-        padding-right: 60px;
-        background-position: right 6rem center;
+      // .form-select_type {
+      //   background-position: right 3rem center;
+      // }
+      .buy-price,
+      .rent-price,
+      .sell-price {
+        width: 222px;
+        padding-left: 50px;
+        label {
+          width: 60px;
+          cursor: pointer;
+          &:hover + #buy-price-select {
+            display: block;
+          }
+        }
       }
+      // .form-select_price {
+      //   background-position: right 6rem center;
+      // }
       .button-search {
         button {
           width: 130px;
@@ -132,12 +156,7 @@ p {
         }
       }      
     }
-    .tab-pane {
-    }
-    .fade {
-    }
-    .show {
-    }
+
   }
 
   &__image {

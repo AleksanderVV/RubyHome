@@ -59,24 +59,30 @@
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                   <div class="tab-buy d-flex">
-                    <select class="form-select form-select_location" aria-label=".form-select">
-                      <option selected>Location</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <select class="form-select form-select_type" aria-label=".form-select">
-                      <option selected>Property type</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <select class="form-select form-select_price" aria-label=".form-select">
-                      <option selected>Price</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
+                    <div class="buy-location">
+                      <label for="buy-location-select">Location</label>
+                      <select class="form-select form-select_location" id="buy-location-select">
+                        <option value="1" selected>Dhaka</option>
+                        <option value="2">Kyiv</option>
+                        <option value="3">Kharkiv</option>
+                      </select>
+                    </div>
+                    <div class="buy-type">
+                      <label for="buy-type-select">Property type</label>
+                      <select class="form-select form-select_type" id="buy-type-select">
+                        <option value="1" selected>Duplex</option>
+                        <option value="2">One room</option>
+                        <option value="3">Two room</option>
+                      </select>
+                    </div>
+                    <div class="buy-price">
+                      <label for="buy-price-select">Price</label>
+                      <select class="form-select form-select_price" id="buy-price-select">
+                        <option value="1" selected>$4000-$8000</option>
+                        <option value="2">$8000-$10000</option>
+                        <option value="3">$10000-$15000</option>
+                      </select>
+                    </div>
                     <div class="button-search">
                       <button type="submit">
                         <img src="@img/icon/lins.png" alt="search">
@@ -84,8 +90,72 @@
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                  <div class="tab-buy tab-rent d-flex">
+                    <div class="rent-location">
+                      <label for="rent-location-select">Location</label>
+                      <select class="form-select form-select_location" id="rent-location-select">
+                        <option value="1" selected>Dhaka</option>
+                        <option value="2">Kyiv</option>
+                        <option value="3">Kharkiv</option>
+                      </select>
+                    </div>
+                    <div class="rent-type">
+                      <label for="rent-type-select">Property type</label>
+                      <select class="form-select form-select_type" id="rent-type-select">
+                        <option value="1" selected>Duplex</option>
+                        <option value="2">One room</option>
+                        <option value="3">Two room</option>
+                      </select>
+                    </div>
+                    <div class="rent-price">
+                      <label for="rent-price-select">Price</label>
+                      <select class="form-select form-select_price" id="rent-price-select">
+                        <option value="1" selected>$4000-$8000</option>
+                        <option value="2">$8000-$10000</option>
+                        <option value="3">$10000-$15000</option>
+                      </select>
+                    </div>
+                    <div class="button-search">
+                      <button type="submit">
+                        <img src="@img/icon/lins.png" alt="search">
+                        Search</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                  <div class="tab-buy tab-sell d-flex">
+                    <div class="sell-location">
+                      <label for="sell-location-select">Location</label>
+                      <select class="form-select form-select_location" id="sell-location-select">
+                        <option value="1" selected>Dhaka</option>
+                        <option value="2">Kyiv</option>
+                        <option value="3">Kharkiv</option>
+                      </select>
+                    </div>
+                    <div class="sell-type">
+                      <label for="sell-type-select">Property type</label>
+                      <select class="form-select form-select_type" id="sell-type-select">
+                        <option value="1" selected>Duplex</option>
+                        <option value="2">One room</option>
+                        <option value="3">Two room</option>
+                      </select>
+                    </div>
+                    <div class="sell-price">
+                      <label for="sell-price-select">Price</label>
+                      <select class="form-select form-select_price" id="sell-price-select">
+                        <option value="1" selected>$4000-$8000</option>
+                        <option value="2">$8000-$10000</option>
+                        <option value="3">$10000-$15000</option>
+                      </select>
+                    </div>
+                    <div class="button-search">
+                      <button type="submit">
+                        <img src="@img/icon/lins.png" alt="search">
+                        Search</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
