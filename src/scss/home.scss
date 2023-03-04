@@ -1,15 +1,34 @@
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
+h2 {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 66px;
+  &::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+    left: -6px;
+    height: 52px;
+    width: 41px;
+    background: url('@img/icon/marker.png') no-repeat;
+  }
+}
+h4 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
 
 //===Partners=================================================================================================
 
 .partners {
     padding: 100px 0px;
 		&__title {
-      font-weight: 600;
-      font-size: 44px;
-      line-height: 66px;
       text-align: center;
       margin-bottom: 65px;
 		}
@@ -29,10 +48,10 @@ h1,h2,h3,h4,h5,h6 {
   padding-top: 40px;
   padding-bottom: 110px;
   &__title {
-    font-weight: 600;
-    font-size: 44px;
-    line-height: 66px;
     margin-bottom: 70px;
+    h2::before {
+      left: -14px;
+    }
   }
 
   &__viewall {
@@ -54,13 +73,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card-prop {
-
+  box-shadow: 0px 8px 70px rgba(0, 0, 0, 0.07);
   &__title {
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 33px;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 10px;
@@ -122,15 +138,195 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 5px;
   }
 }
-.data-items {
 
-  &__item {
+
+//===Property Featured=================================================================================================
+
+.property-featured {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #F9F9F9;
+  text-align: center;
+  h2 {
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    color: $opacityMainColor;
+    max-width: 728px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
+
+  &__card {
+    background-color: $whiteColor;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 30px;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+      width: 46px;
+      background-color: rgba(254, 117, 63, 0.1);
+      margin-bottom: 15px;
+      img {
+        flex-shrink: 0;
+      }
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    p {
+      color: $opacityMainColor;
+    }
+  }
+
+}
+
+//===Reviews=================================================================================================
+
+.reviews {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  text-align: center;
+  &__subtitle {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $orangeColor;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__card {
+    max-width: 558px;
+    border: 2px solid rgba(254, 117, 63, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
   }
 }
 
+.carousel {
+}
+.slide {
+}
+.carousel-indicators {
+  bottom: -60px;
+  button[data-bs-target] {
+    width: 12px;
+    height: 12px;
+    background: $greyColor;
+    border-radius: 50%;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  button.active {
+    background: $cianColor;
+  }
+}
 
-//====================================================================================================
-//====================================================================================================
-//====================================================================================================
+.card-review {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__persone {
+  }
+
+  &__name {
+    margin-left: 19px;
+  }
+
+  &__prof {
+    margin-left: 19px;
+    color: $opacityMainColor;
+  }
+
+  &__text {
+    color: $opacityMainColor;
+  }
+}
+
+//===Subscribe Form=================================================================================================
+
+.subscribe-form {
+  margin-top: 70px;
+  margin-bottom: 140px;
+
+  &__body {
+    position: relative;
+    background: #433E89;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 200px;
+    &::before {
+      position: absolute;
+      content: '';
+      height: 208px;
+      width: 208px;
+      top: 1%;
+      left: -14%;
+      background-color: $whiteColor;
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      height: 208px;
+      width: 208px;
+      bottom: -33%;
+      right: 1%;
+      background-color: $whiteColor;
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+  }
+  h2 {
+    color: $whiteColor;
+    margin-bottom: 15px;
+    &::before {
+      content: none;
+    }
+  }
+  &__subtitle {
+    color: $whiteColor;
+    opacity: 0.7;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    max-width: 635px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    max-width: 743px;
+    margin: 0 auto;
+    padding: 7px;
+    padding-left: 30px;
+    border-radius: 10px;
+    input {
+      outline: none;
+      width: 100%;
+      max-width: 500px;
+    }
+    button {
+      color: $whiteColor;
+      font-weight: 500;
+      background-color: $cianColor;
+      padding: 16px 41px;
+      border-radius: 10px;
+    }
+  }
+}
+
 //====================================================================================================
 //====================================================================================================

@@ -1,3 +1,90 @@
 //====================================================================================================
 
+.footer {
+  padding-bottom: 50px;
+  &__main {
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    color: $opacityMainColor;
+    letter-spacing: 1px;
+    letter-spacing: 0.01px;
+    max-width: 265px;
+    margin-bottom: 25px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__social-item {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $orangeColor;
+    border-radius: 50%;
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  &__nav {
+  }
+
+  &__nav-col {
+  }
+
+  &__nav-title {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__nav-block {
+    margin: 0;
+    padding: 0;
+    li {
+      color: $opacityMainColor;
+      font-weight: 500;
+      line-height: 17px;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__address {
+    color: $opacityMainColor;
+    line-height: 17px;
+    text-transform: capitalize;
+  }
+
+  &__address-title {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__address-country {
+    margin-bottom: 15px;
+  }
+
+  &__address-street {
+    margin-bottom: 15px;
+  }
+
+  &__address-url {
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: none;
+  }
+
+  &__address-tel {
+  }
+}
+
 //====================================================================================================

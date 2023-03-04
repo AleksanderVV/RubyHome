@@ -26,8 +26,9 @@ $mainColor: #030A1B; // Default color
 $orangeColor: #FE753F;
 $cianColor: #2E6EFF;
 $whiteColor: #ffffff;
-$backgroundBody: #E5E5E5;
+$backgroundBody: #ffffff;
 $opacityMainColor: rgba(0, 0, 0, 0.7);
+$greyColor: #EDEDED;
 
 // SETTINGS ===============================================================================================================================================================================================================================================================================================
 // Minimum width
@@ -59,7 +60,7 @@ $responsiveType: 1;
 
 body {
   line-height: 24px;
-  background: #E5E5E5;
+  background: $backgroundBody;
 	// Scroll blocked
 	.lock & {
 		overflow: hidden;
