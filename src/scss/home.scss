@@ -36,6 +36,14 @@ h4 {
 		&__items {
       display: flex;
       justify-content: space-between;
+      @media (max-width:$tablet){
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px 140px;
+      }
+      @media (max-width:$mobile){
+        gap: 50px 60px; 
+      }
 		}
 
 		&__item {
@@ -49,6 +57,10 @@ h4 {
   padding-bottom: 110px;
   &__title {
     margin-bottom: 70px;
+    @media (max-width:$mobile){
+      text-align: center;
+      margin-bottom: 20px; 
+    }
     h2::before {
       left: -14px;
     }
@@ -64,6 +76,8 @@ h4 {
   &__card {
     background-color: $whiteColor;
     border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
     margin-bottom: 30px;
     >img {
       width: 100%;
@@ -155,6 +169,9 @@ h4 {
     max-width: 728px;
     margin: 0 auto;
     margin-bottom: 70px;
+    @media (max-width:$mobile){
+      max-width: 480px; 
+    }
   }
 
   &__card {
@@ -163,6 +180,14 @@ h4 {
     padding: 25px;
     text-align: left;
     margin-bottom: 30px;
+    @media (max-width:$tablet){
+      height: 100%;
+      margin-bottom: 0;
+    }
+    @media (max-width:$mobile){
+      max-width: 480px;
+      margin: 0 auto;
+    }
     div {
       display: flex;
       align-items: center;
@@ -205,6 +230,13 @@ h4 {
 
   &__title {
     margin-bottom: 70px;
+    @media (max-width:$mobile){
+      max-width: 470px; 
+      margin: 0 auto;
+      h2::before {
+        left: 95px;
+      }
+    }
   }
 
   &__card {
@@ -213,13 +245,12 @@ h4 {
     border-radius: 10px;
     padding: 30px;
     text-align: left;
+    @media (max-width:$tablet){
+      margin: 0 auto;
+    }
   }
 }
 
-.carousel {
-}
-.slide {
-}
 .carousel-indicators {
   bottom: -60px;
   button[data-bs-target] {
@@ -270,6 +301,18 @@ h4 {
     border-radius: 10px;
     text-align: center;
     padding: 70px 200px;
+    @media (max-width:$tablet){
+      padding: 70px 70px;
+    }
+    @media (max-width:$mobile){
+      padding: 70px 40px;
+      h2 {
+        line-height: 44px;
+      }
+      form {
+        padding-left: 20px;
+      }
+    }
     &::before {
       position: absolute;
       content: '';

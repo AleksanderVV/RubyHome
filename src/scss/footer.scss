@@ -3,6 +3,10 @@
 .footer {
   padding-bottom: 50px;
   &__main {
+    @media (max-width:$mobile){
+      max-width: 220px;
+      margin: 0 auto; 
+    }
   }
 
   &__logo {
@@ -34,11 +38,18 @@
       flex-shrink: 0;
     }
   }
-
-  &__nav {
+  &__nav-parrent {
+    @media (max-width:$mobile){
+      order: -1;
+      margin-bottom: 30px; 
+    }
   }
 
   &__nav-col {
+    @media (max-width:$mobile){
+      max-width: 100px;
+      margin: 0 auto;
+    }
   }
 
   &__nav-title {
@@ -62,6 +73,10 @@
     color: $opacityMainColor;
     line-height: 17px;
     text-transform: capitalize;
+    @media (max-width:$mobile){
+      max-width: 160px;
+      margin: 0 auto;
+    }
   }
 
   &__address-title {

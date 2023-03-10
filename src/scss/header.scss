@@ -15,7 +15,9 @@ p {
 }
 
 .header {
-
+  @media (max-width:$mobile){
+    margin-bottom: 100px; 
+  }
   &__top {
     margin-top: 35px;
     margin-bottom: 70px;
@@ -23,6 +25,9 @@ p {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0px;
     padding-left: 0px;
+  }
+  &__main {
+    position: relative;
   }
   .navbar {
     height: 100%;
@@ -69,6 +74,11 @@ p {
   &__info {
     @media (max-width:$tablet){
       padding-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      position: relative;
+      z-index: 5; 
+      max-width: 470px;
     }
   }
   &__title {
@@ -136,6 +146,17 @@ p {
       @media (max-width:$tablet){
         max-width: 720px;
       }
+      @media (max-width:$mobile){
+        max-width: 420px; 
+      }
+      .tab-buy,
+      .tab-rent,
+      .tab-sell {
+        @media (max-width:$mobile){
+          flex-wrap: wrap;
+          gap: 20px; 
+        }
+      }
       label {
         background: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3e%3cpath fill=%27none%27 stroke=%27%23343a40%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m2 5 6 6 6-6%27/%3e%3c/svg%3e") no-repeat;
         background-size: 16px 12px;
@@ -202,9 +223,6 @@ p {
           }
         }
       }
-      // .form-select_price {
-      //   background-position: right 6rem center;
-      // }
       .button-search {
         button {
           width: 130px;
@@ -218,6 +236,9 @@ p {
             margin-left: 30px;
             margin-right: 20px;
           }
+          @media (max-width:$mobile){
+            margin-left: 20px; 
+          }
           img {
             margin-right: 2px;
             padding-top: 4px;
@@ -229,6 +250,13 @@ p {
   }
 
   &__image {
+    @media (max-width:$mobile){
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      opacity: 0.5;
+    }
     img {
       max-width: 484px;
       border-radius: 10px;
