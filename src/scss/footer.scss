@@ -68,6 +68,12 @@
       margin-bottom: 15px;
     }
   }
+  &__logo-social {
+    @media (max-width:$mobileSmall){
+      order: 2; 
+      margin-top: 30px;
+    }
+  }
 
   &__address {
     color: $opacityMainColor;

@@ -18,6 +18,16 @@ p {
   @media (max-width:$mobile){
     margin-bottom: 100px; 
   }
+  @media (max-width:$mobileSmall){
+    margin-bottom: 0; 
+  }
+  &__logo {
+    img {
+      @media (max-width:$mobileSmall){
+        width: 200px; 
+      }
+    }
+  }
   &__top {
     margin-top: 35px;
     margin-bottom: 70px;
@@ -94,6 +104,9 @@ p {
       @media (max-width:$tablet){
         font-size: 44px;
       }
+      @media (max-width:$mobileSmall){
+        font-size: 32px; 
+      }
     }
   }
 
@@ -149,12 +162,23 @@ p {
       @media (max-width:$mobile){
         max-width: 420px; 
       }
+      @media (max-width:$mobileSmall){
+        max-width: 280px; 
+      }
       .tab-buy,
       .tab-rent,
       .tab-sell {
         @media (max-width:$mobile){
           flex-wrap: wrap;
           gap: 20px; 
+        }
+        @media (max-width:$mobileSmall){
+          flex-direction: column; 
+          .buy-type,
+          .sell-type,
+          .rent-type {
+            padding-left: 20px;
+          }
         }
       }
       label {
